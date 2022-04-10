@@ -99,10 +99,11 @@ text-align: center;
 
 const Copied = styled.h1`
 color: white;
-font-size: 3em;
+font-size: 2em;
 margin: 0px;
 padding: 0px;
 text-transform: uppercase;
+margin-top: 40px;
 `;
 
 const Heading = styled.h1`
