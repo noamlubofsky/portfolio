@@ -6,17 +6,31 @@ function About() {
 const aboutme = "After working as a teacher for 4 years and receiving my master's degree in education, I have made the switch to software engineering and graduated from Flatiron school’s software engineering program. The program required me to learn a ton of material in a short period of time and was easily the hardest thing I’ve ever done. Although it was rigorous, I immensely enjoyed the program and developed a real passion for engineering beautiful full-stack applications that function seamlessly. Although I have learned a lot thus far, I know that there is still an infinite amount for me to learn and grow as a software engineer. My goal is to find a job where I can utilize the foundation of skills I have already acquired while learning and growing as an engineer from my colleagues and higher-ups every day."
 let aboutArr = aboutme.split(' ')
 
+const subheading = "Former teacher turned software engineer with a passion for front end development"
+let subArr = subheading.split(' ')
+
     return(
         <Container>
-            <Img src={headshot}/>
-            <AboutContainer>
+       <div class="person">
+      <div class="container">
+        <div class="container-inner">
+          <img
+            class="circle"
+src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU'          />
+          <img
+            class="img img1"
+src={headshot}          />
+        </div>
+      </div>
+    </div>            <AboutContainer>
             <Heading>ABOUT</Heading> <Heading2>ME</Heading2>
         <br/>
-        <SubHeading>Former teacher turned software engineer with a passion for front end development</SubHeading>
-        <br/>
-        {/* <Paragraph>
-        After working as a teacher for 4 years and receiving my master's degree in education, I have made the switch to software engineering and graduated from Flatiron school’s software engineering program. The program required me to learn a ton of material in a short period of time and was easily the hardest thing I’ve ever done. Although it was rigorous, I immensely enjoyed the program and developed a real passion for engineering beautiful full-stack applications that function seamlessly. Although I have learned a lot thus far, I know that there is still an infinite amount for me to learn and grow as a software engineer. My goal is to find a job where I can utilize the foundation of skills I have already acquired while learning and growing as an engineer from my colleagues and higher-ups every day. 
-        </Paragraph> */}
+        {subArr.map(word => {
+            let spaced = word + '\xa0'
+            return(
+                <SubWord>{spaced}</SubWord>
+            )
+        })}        <br/>
         {aboutArr.map(word => {
             let spaced = word + '\xa0'
             return(
@@ -24,6 +38,8 @@ let aboutArr = aboutme.split(' ')
             )
         })}
         </AboutContainer>
+ 
+  
         </Container>
     )
 }
@@ -33,11 +49,13 @@ color: white;
 font-size: 1.5em;
 margin-top: 20px;
 display: inline-block;
-transition-all: 1s;
+transition: 0.3s;
+text-shadow: 2px 2px 4px #000000;
+
 &:hover{
-    // font-size: 2.5em;
-    // transition-all: 1s;
     color: #202124;
+    text-shadow: 2px 2px 4px white;
+    font-size: 2em;
 
 }
 `;
@@ -69,11 +87,20 @@ margin-bottom: 20px;
 
 `;
 
-const SubHeading = styled.h1`
+const SubWord = styled.h1`
 color: #202124;
 font-size: 2em;
-position: relative;
-display: inline
+margin-top: 20px;
+display: inline-block;
+transition: 0.3s;
+text-shadow: 2px 2px 4px white;
+
+&:hover{
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+
+}
 
 `;
 
