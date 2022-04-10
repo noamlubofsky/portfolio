@@ -18,16 +18,16 @@ function Contact() {
 
 <div id="pillar">
 
-<Line>
-<Box></Box>
+{/* <Line>
+<Box></Box> */}
 <div class="row" >
   <div class="wrap"  >
     <div class="left">Name</div>
     <div class="right" onClick={copyToClipboard}>Noam Lubofsky</div>  
     </div>
 </div>
-<Box></Box>
-</Line>
+{/* <Box></Box>
+</Line> */}
   
   <div class="row">
   <div class="wrap">
