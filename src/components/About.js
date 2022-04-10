@@ -25,18 +25,37 @@ src={headshot}          />
     </div>            <AboutContainer>
             <Heading>ABOUT</Heading> <Heading2>ME</Heading2>
         <br/>
+        {/* <div class="typewriter">
+  <h1>{aboutme}</h1>
+</div> */}
         {subArr.map(word => {
             let spaced = word + '\xa0'
             return(
                 <SubWord>{spaced}</SubWord>
             )
         })}        <br/>
+
         {aboutArr.map(word => {
             let spaced = word + '\xa0'
             return(
                 <Word>{spaced}</Word>
             )
         })}
+
+
+{/* <section class="computer" aria-hidden="true" role="presentation">
+    <div class="program">
+        <div class="doc">
+            <div class="typing">
+                <div class="text-cover"></div>
+                <p>{aboutme}</p>
+            </div>
+        </div>
+    </div>
+</section> */}
+
+
+
         </AboutContainer>
  
   
@@ -98,7 +117,7 @@ text-shadow: 2px 2px 4px white;
 &:hover{
     font-size: 2.5em;
     // color: white;
-    text-shadow: 2px 2px 4px #89BEE0;
+    // text-shadow: 2px 2px 4px #89BEE0;
 
 }
 

@@ -18,15 +18,16 @@ function Contact() {
 
 <div id="pillar">
 
-<div >
+<Line>
+<Box></Box>
 <div class="row" >
   <div class="wrap"  >
     <div class="left">Name</div>
     <div class="right" onClick={copyToClipboard}>Noam Lubofsky</div>  
     </div>
 </div>
-</div>
-
+<Box></Box>
+</Line>
   
   <div class="row">
   <div class="wrap">
@@ -120,6 +121,19 @@ position: relative;
 display: inline-block;
 margin-top: 20px;
 margin-bottom: 20px;
+
+`;
+
+const Line = styled.div`
+display: grid;
+grid-template-columns: auto auto auto;
+`;
+
+const Box = styled.div`
+background-color: grey;
+height: 20px;
+width: 150px;
+display: inline-block;
 
 `;
 
