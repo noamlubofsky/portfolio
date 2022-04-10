@@ -17,16 +17,24 @@ function Header() {
     navigate("/about");
   };
 
+  const toContact = () => {
+      navigate("/contact");
+  }
+
     return(
         <div>
         <Container>
             <Buttons>
-        <button className="glow-on-hover" onClick={toAbout}>
-  About
-</button>  
+  
 <button className="glow-on-hover" onClick={toProjects}>
   Projects
 </button> 
+<button className="glow-on-hover" onClick={toAbout}>
+  About
+</button>
+<button className="glow-on-hover" onClick={toContact}>
+  Contact
+</button>
 </Buttons> 
 <Home>
 <button className="glow-on-hover" onClick={toHome}>

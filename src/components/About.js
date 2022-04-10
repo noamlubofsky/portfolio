@@ -53,8 +53,8 @@ transition: 0.3s;
 text-shadow: 2px 2px 4px #000000;
 
 &:hover{
-    color: #202124;
-    text-shadow: 2px 2px 4px white;
+    // color: #202124;
+    text-shadow: 2px 2px 4px #89BEE0;
     font-size: 2em;
 
 }
@@ -97,8 +97,8 @@ text-shadow: 2px 2px 4px white;
 
 &:hover{
     font-size: 2.5em;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    // color: white;
+    text-shadow: 2px 2px 4px #89BEE0;
 
 }
 
