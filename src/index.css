@@ -341,7 +341,7 @@ background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstra
 
 #pillar {
   display: block;
-  /* margin: 100px auto; */
+  margin: 100px auto;
   margin-left: 350px;
   width: 400px;
   transform: translateX(-200px);
