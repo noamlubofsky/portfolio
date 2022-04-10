@@ -1,13 +1,232 @@
-body {
+body .App {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', Arial, sans-serif;
+user-select: none;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.glow-on-hover {
+  margin-top: 10px;
+  align-items: center;
+  position: absolute;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: calc(1px + 1vw);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.15em #132529;
+  
+  white-space: nowrap;
+  filter: blur(0.007em);
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-left: 80px;
+    
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #FFFFFF, #C6AEA8, #B49490, #342930, #5D9EB3, #216A86, #043042, #202124);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(104, 104, 104)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #202124;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+h1{
+  margin-top: 16vh;
+}
+
+iframe {
+  height: 812px;
+  width: 375px;
+  max-height: 812px;
+  min-height: 812px;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+  margin-bottom: 60px;
+}
+
+.holds-the-iframe {
+  background:url(https://www.dariusland.com/images/load.gif) center center no-repeat;
+    /* background:url(https://p1-ofp.static.pub/ShareResource/services/pc-services/img-home-pc-services/lsb-loading.45fcf4234c4fb66f.gif) center center no-repeat; */
+
+}
+
+
+
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.display-on-hover {
+  border-radius: 50%;
+
+  align-items: center;
+  position: relative;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: calc(1px + 1vw);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.15em #132529;
+  white-space: nowrap;
+  filter: blur(0.007em);
+    width: 250px;
+    height: 250px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    z-index: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.display-on-hover:before {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    content: '';
+    background: linear-gradient(45deg, #FFFFFF, #C6AEA8, #B49490, #342930, #5D9EB3, #216A86, #043042, #202124);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.display-on-hover:active {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    color: rgb(104, 104, 104)
+}
+
+.display-on-hover:active:after {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    background: transparent;
+}
+
+.display-on-hover:hover:before {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    opacity: 1;
+}
+
+.display-on-hover:after {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definition-wallpapers-abstract-wallpaper-1920x1080.jpg);
+    left: 0;
+    top: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
