@@ -29,8 +29,11 @@ function About({apple, grad, job, journey, flatiron, learn, laptop}) {
 const aboutme = "While working as a teacher and receiving a master's degree in education, I simultaneously discovered a newfound passion for software engineering. I followed my excitement and attended the Flatiron school’s software engineering program. The program was rigorous but I enjoyed every moment and every new thing I learned. I am devoted to continue my journey towards becomming a professional software engineer and towards creating beautiful full-stack applications that function seamlessly. My goal now is to find a job where I can utilize the foundation of skills I have already acquired while learning and growing as an engineer from my colleagues and superiors every day. As a teacher, I strived to instill a thirst for knowledge and love of learning that went beyond the classroom. This drive is something I value and possess in all walks of life, and I am so excited to continue learning."
 let aboutArr = aboutme.split(' ')
 
-const subheading = "Former teacher turned software engineer with a passion for front end development"
-let subArr = subheading.split(' ')
+const subheading1 = "Former teacher turned software engineer"
+let subArr1 = subheading1.split(' ')
+
+const subheading2 = "with a passion for front end development"
+let subArr2 = subheading2.split(' ')
 
 const emoji = () => {
     if (emojiText.toLowerCase() === 'teacher'){
@@ -72,20 +75,30 @@ src={headshot}          />
     </div>            <AboutContainer>
             <Heading>ABOUT</Heading> <Heading2>ME</Heading2>
         <br/>
-        <div class="wrapper">
+        {/* <div class="wrapper">
   <div class="moving">
     <img className='emoji' src={emoji()}/>
-  </div>
+  </div> */}
   {/* <div class="moving2">
     <img className='emoji' src={emoji()}/>
   </div> */}
-</div>
-        {subArr.map(word => {
+{/* </div> */}
+        {subArr1.map(word => {
             let spaced = word + '\xa0'
             return(
                 <SubWord>{spaced}</SubWord>
             )
-        })}        <br/>
+        })}
+                <br/>
+
+                {subArr2.map(word => {
+            let spaced = word + '\xa0'
+            return(
+                <SubWord>{spaced}</SubWord>
+            )
+        })}          
+        
+        <br/>
 
         {aboutArr.map(word => {
             let spaced = word + '\xa0'
@@ -178,14 +191,14 @@ margin-bottom: 20px;
 
 const SubWord = styled.h1`
 color: #202124;
-font-size: 1.8em;
+font-size: 2em;
 margin-top: 20px;
 display: inline-block;
 transition: 0.3s;
 text-shadow: 2px 2px 4px white;
-
+text-transform: uppercase;
 &:hover{
-    font-size: 2em;
+    font-size: 2.5em;
     // color: white;
     // text-shadow: 2px 2px 4px #89BEE0;
 
