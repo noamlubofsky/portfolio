@@ -72,17 +72,16 @@ src='https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definitio
 src={headshot}          />
         </div>
       </div>
-    </div>            <AboutContainer>
-            <Heading>ABOUT</Heading> <Heading2>ME</Heading2>
-        <br/>
-        {/* <div class="wrapper">
+    </div>     
+    {/* <div class="wrapper">
   <div class="moving">
     <img className='emoji' src={emoji()}/>
-  </div> */}
-  {/* <div class="moving2">
-    <img className='emoji' src={emoji()}/>
-  </div> */}
-{/* </div> */}
+  </div>
+</div>        */}
+    <AboutContainer>
+            <Heading>ABOUT</Heading> <Heading2>ME</Heading2>
+        <br/>
+
         {subArr1.map(word => {
             let spaced = word + '\xa0'
             return(

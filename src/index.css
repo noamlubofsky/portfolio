@@ -451,16 +451,20 @@ display: inline-block;
 
 
 .wrapper{
-  position: absolute;
-  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  float: right;
+  margin-top: 10vh;
 }
 
 .moving{
-  position: absolute;
+  /* position: absolute; */
   width: 100px;
   z-index: 10;
   left: 18%;
-  animation: moveBus 9s ease-in-out forwards infinite;
+  animation: rotate 3s ease-in-out forwards infinite;
 }
 
 .moving2{
@@ -472,7 +476,16 @@ display: inline-block;
 }
 
 .emoji {
-  height: 40px;
+  height: 80px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes moveBus{
