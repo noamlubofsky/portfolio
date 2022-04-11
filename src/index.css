@@ -7,7 +7,10 @@ body .App {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat', Arial, sans-serif;
 user-select: none;
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
 
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 code {
@@ -230,6 +233,17 @@ background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstra
     100% { background-position: 0 0; }
 }
 
+.apple:before{
+  background:lightblue;
+  height:1000px;
+  animation: expand 5s;
+
+}
+
+@keyframes expand{
+  0%{height:0px}
+  100%{height:1000px}
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 /* body {
@@ -413,84 +427,68 @@ background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstra
   transition: .3s;
 }
 
-/* html {
-  font-size: 100%;
-  overflow-y: scroll;
-  box-sizing: border-box;
+.SectionContainer {
+background-color: grey;
+width: 20vw;
+display: inline-block;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+.SectionTitle{
+  color: black;
 }
-body {
-  padding: 1em;
-  background: #d8f6f9;
-} */
-.computer {
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
+
+.SectionDetails{
+  color: transparent;
 }
-.computer-img {
-  position: relative;
-  z-index: 99;
-  max-width: 100%;
+
+.SectionContainer:hover .SectionDetails{
+  color: black;
 }
-.program {
-  background: #ddd;
-  padding: 9% 15%;
+
+.SectionContainer:hover .SectionTitle{
+  color: transparent;
+}
+
+
+.wrapper{
   position: absolute;
-  top: 5px;
-  bottom: 26%;
-  z-index: 1;
-  border-radius: 10px;
-}
-.doc {
-  background: #fff;
-  max-width: 600px;
-  height: 100%;
-  overflow: hidden;
-  padding: 10%;
-  font-size: 0.2em;
-  margin: 0 auto;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
-}
-.typing {
   width: 100%;
-  overflow: hidden;
-  top: 0px;
-  position: relative;
-  animation: typeIt 320s steps(40) infinite;
 }
-.typing p {
-  font-size: 1.2em;
-  line-height: 2em;
-  margin: 0;
-  text-indent: 2em;
-}
-.text-cover {
+
+.moving{
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2em;
-  /* background: #fff; */
-  width: 100%;
-  animation: revealLine 8s steps(40) infinite;
+  width: 100px;
+  z-index: 10;
+  left: 18%;
+  animation: moveBus 9s ease-in-out forwards infinite;
 }
-@keyframes revealLine {
-  0% {
-    left: 0%;
- }
-  100% {
-    left: 100%;
- }
+
+.moving2{
+  position: absolute;
+  width: 100px;
+  z-index: 10;
+  left: -10%;
+  animation: moveBus2 4s ease-in-out 5.5s forwards infinite;
 }
-@keyframes typeIt {
+
+.emoji {
+  height: 40px;
+}
+
+@keyframes moveBus{
   0% {
-    top: 0;
-    height: 2em;
- }
+  left: 0%;
+  }
   100% {
-    top: -60em;
-    height: 82em;
- }
+  left: 100%;
+  }
+}
+
+@keyframes moveBus2{
+  0% {
+  left: -10%;
+  }
+  100% {
+  left: 18%;
+  }
 }

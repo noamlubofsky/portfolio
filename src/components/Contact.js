@@ -51,19 +51,19 @@ function Contact() {
 </div>
   
   <div class="row">
-  <div class="wrap" >
-    <div class="left" >LinkedIn</div>
-    <div class="right" onClick={copyToClipboard} >https://www.linkedin.com/in/noam-lubofsky-0120b627/</div>  
-    </div>
-</div>
-  
-  <div class="row">
   <div class="wrap">
     <div class="left">Medium</div>
     <div class="right" onClick={copyToClipboard}>https://noamlubofsky.medium.com
 </div>  
     </div>
-</div>  
+</div>
+
+<div class="row">
+  <div class="wrap" >
+    <div class="left" >LinkedIn</div>
+    <div class="right" onClick={copyToClipboard} >https://www.linkedin.com/in/noam-lubofsky-0120b627/</div>  
+    </div>
+</div>
   
   </div>
   {!copied ? null : <Copied>Copied!</Copied>}
@@ -74,13 +74,10 @@ function Contact() {
 
 
 const Container = styled.div`
-// background-image: url(https://img5.goodfon.com/wallpaper/nbig/2/6f/avstraliia-skaly-okean-1.jpg);
-// background-image: url(https://data.1freewallpapers.com/download/rocks-on-the-shore.jpg);
-// background-image: url(https://images.wallpaperscraft.com/image/single/rocks_ocean_aerial_view_135764_1920x1080.jpg);
-background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
+// background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
 
-background-repeat: no-repeat;
-background-size: cover;
+// background-repeat: no-repeat;
+// background-size: cover;
 height: 650px;
 margin-bottom: 0px;
 padding: 0;

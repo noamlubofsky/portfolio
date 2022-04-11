@@ -83,9 +83,9 @@ justify-content: center;
 text-align: center;
 align-items: center;
 min-height: 100vh;
-background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
-background-repeat: no-repeat;
-background-size: cover;
+// background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
+// background-repeat: no-repeat;
+// background-size: cover;
 `;
 
 const ProjectsContainer = styled.div`

@@ -12,6 +12,14 @@ import article from "./article.png"
 import geography from "./geography.png"
 import conway from "./conway.png"
 import office from "./office.png"
+import apple from "./apple.png"
+import flatiron from "./flatiron.png"
+import grad from "./grad.png"
+import job from "./job.png"
+import journey from "./journey.png"
+import laptop from "./laptop.png"
+import learn from "./learn.png"
+
 
 
 function App() {
@@ -81,7 +89,13 @@ const projects = [
             path="/about"
             element={
               <About
-
+                apple={apple}
+                grad={grad}
+                job={job}
+                journey={journey}
+                laptop={laptop}
+                learn={learn}
+                flatiron={flatiron}
               />
             }
           />
