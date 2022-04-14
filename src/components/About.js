@@ -33,7 +33,7 @@ let aboutArr = aboutme.split(' ')
 const subheading1 = "Former teacher turned software engineer"
 let subArr1 = subheading1.split(' ')
 
-const subheading2 = "with a passion for front end development"
+const subheading2 = "with a passion for front-end development"
 let subArr2 = subheading2.split(' ')
 
 const emoji = () => {
