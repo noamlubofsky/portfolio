@@ -69,7 +69,7 @@ margin-top: 20px;
 `;
 
 const Heading2 = styled.h1`
-color: #202124;
+color: #54A09E;
 font-size: 6em;
 position: relative;
 display: inline-block;

@@ -7,8 +7,16 @@ body .App {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat', Arial, sans-serif;
 user-select: none;
-background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
-
+/* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU); */
+/* background-image: url(https://wallpaperaccess.com/full/1549265.jpg); */
+/* background-image: url(http://www.priyankrege.com/images/backgrounds/bg-1.jpg); */
+/* background-image: url(https://media1.giphy.com/media/BHNfhgU63qrks/giphy.gif); */
+/* background-image: url(https://cutewallpaper.org/21/animated-background-gif/Motion-Background-Plexus-Moving-Animated-Lines-HD-Backdrop-GIF.gif); */
+/* background-image: url(https://fintech-council.org/uploads/event_images/1597228771.gif); */
+/* background-image: url(https://nebigdatahub.org/wp-content/uploads/2019/11/7T9364v.gif); */
+/* background-image: url(https://i.pinimg.com/originals/c6/ad/2e/c6ad2ec1fbc13a378d668b5c58a427ed.gif); */
+/* background-image: url(https://i.pinimg.com/originals/1d/73/5a/1d735ad8eee8350adc96d50e1421ee6d.gif); */
+background-color: #10181F;
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -48,7 +56,8 @@ code {
 
 .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #FFFFFF, #C6AEA8, #B49490, #342930, #5D9EB3, #216A86, #043042, #202124);
+    /* background: linear-gradient(45deg, #FFFFFF, #C6AEA8, #B49490, #342930, #5D9EB3, #216A86, #043042, #202124); */
+    background: linear-gradient(45deg, #FFFFFF, #07C4C8, #13BFDF, #54A09E, #058489, #004A80, #013F44, #012670);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -81,7 +90,8 @@ code {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #202124;
+    /* background: #202124; */
+    background: #35363A;
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -123,7 +133,11 @@ iframe {
 }
 
 .holds-the-iframe {
-  background:url(https://www.dariusland.com/images/load.gif) center center no-repeat;
+  /* background:url(https://www.dariusland.com/images/load.gif)  */
+  /* background:url(https://mrsolver.uk/static-finder/picture/ajax-loader.gif)  */
+  /* background:url(https://i.pinimg.com/originals/2b/02/15/2b02159fee58d573c079ad5212d56b63.gif)  */
+  background:url(https://androidexample365.com/content/images/2019/07/gear_duo.gif) 
+  center center no-repeat;
     /* background:url(https://p1-ofp.static.pub/ShareResource/services/pc-services/img-home-pc-services/lsb-loading.45fcf4234c4fb66f.gif) center center no-repeat; */
 
 }
@@ -174,7 +188,7 @@ iframe {
   text-align: center;
   align-items: center;
     content: '';
-    background: linear-gradient(45deg, #FFFFFF, #C6AEA8, #B49490, #342930, #5D9EB3, #216A86, #043042, #202124);
+    background: linear-gradient(45deg, #FFFFFF, #07C4C8, #13BFDF, #54A09E, #058489, #004A80, #013F44, #012670);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -193,7 +207,8 @@ iframe {
   justify-content: center;
   text-align: center;
   align-items: center;
-    color: rgb(104, 104, 104)
+    color: rgb(104, 104, 104);
+
 }
 
 .display-on-hover:active:after {
@@ -222,9 +237,17 @@ iframe {
     position: absolute;
     width: 100%;
     height: 100%;
-background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definition-wallpapers-abstract-wallpaper-1920x1080.jpg);
+    /* background-image: url(https://media.istockphoto.com/vectors/blue-background-aqua-texture-gradient-light-blur-blend-vector-id1132462892?k=20&m=1132462892&s=170667a&w=0&h=F_2gpQcfD6_uvnxNKyBXnFfKpee5nO3Pbvevq_CK_xI=); */
+/* background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definition-wallpapers-abstract-wallpaper-1920x1080.jpg); */
+background-repeat: no-repeat;
+background-size: cover;
+background-color: white;
     left: 0;
     top: 0;
+}
+
+.display-on-hover:after:hover{
+  background-color: teal;
 }
 
 @keyframes glowing {
@@ -292,7 +315,7 @@ background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstra
   top: -200px;
 }
 .circle {
-  background-color: #fee7d3;
+  background-color: white;
   border-radius: 50%;
   cursor: pointer;
   height: 380px;
@@ -314,7 +337,8 @@ background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstra
 }
 .img1 {
   left: 22px;
-  top: 164px;
+  /* top: 164px; */
+  top: 180px;
   width: 340px;
 }
 .img2 {
@@ -414,7 +438,7 @@ background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstra
   /* width: 3000px; */
   padding: 15px 20px;
   text-align: left;
-  transform: rotateY(90deg);
+  transform: rotateY(60deg);
   transform-origin: left center;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -423,7 +447,8 @@ background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstra
 }
 
 .row .right:hover{
-  opacity: 50%;
+  /* opacity: 50%; */
+  color: #54A09E;
   transition: .3s;
 }
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from "react";
+import bars2 from "../bars2.png";
 
 function Contact() {
     const [copied, setCopied] = useState(false)
@@ -67,18 +68,27 @@ function Contact() {
   
   </div>
   {!copied ? null : <Copied>Copied!</Copied>}
+  <br />
+        <Test>
+  <img src={bars2}/>
+  </Test>
 
         </Container>
     )
 }
 
+const Test = styled.div`
+background-color: white;
+bottom: 0px;
+position: absolute;
+`;
 
 const Container = styled.div`
 // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
 
 // background-repeat: no-repeat;
 // background-size: cover;
-height: 650px;
+min-height: 750px;
 margin-bottom: 0px;
 padding: 0;
 border: 0;
@@ -100,7 +110,7 @@ font-size: 2em;
 margin: 0px;
 padding: 0px;
 text-transform: uppercase;
-margin-top: 40px;
+margin-top: 20px;
 `;
 
 const Heading = styled.h1`
@@ -113,7 +123,7 @@ margin-bottom: 20px;
 `;
 
 const Heading2 = styled.h1`
-color: #202124;
+color: #54A09E;
 font-size: 6em;
 position: relative;
 display: inline-block;

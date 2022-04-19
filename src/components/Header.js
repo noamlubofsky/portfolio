@@ -48,7 +48,9 @@ function Header() {
 
 
 const Container = styled.div`
-    background-color: #202124;
+    // background-color: #202124;
+    background-color: #35363A;
+
     height: 10vh;
     // margin-bottom: 20vh;
 `;

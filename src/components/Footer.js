@@ -26,7 +26,8 @@ function Footer() {
 
 
 const Container = styled.div`
-    background-color: #202124;
+    // background-color: #202124;
+    background-color: #35363A;
     height: 10vh;
 `;
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import headshot from "../headshot.png";
 import React, { useState } from "react";
+import bars1 from "../bars1.png";
 
 function About({apple, grad, job, journey, flatiron, learn, laptop}) {
     const [emojiText, setEmojiText] = useState('')
@@ -26,9 +27,16 @@ function About({apple, grad, job, journey, flatiron, learn, laptop}) {
         }
     ]
 
-const aboutme = "While working as a teacher and receiving a master's degree in education, I discovered a newfound passion for software engineering. I decided to make a career change and took the leap to attend the Flatiron school’s software engineering program. The program was rigorous but I soaked in every new thing I learned and quickly fell in love with front-end development. The combination of creative problem solving and data manipulation along with the styling and design side of things fits my skillset so perfectly which has led to true enjoyment of coding. I am devoted to continuing my journey towards becoming a professional software engineer and towards creating beautiful full-stack applications that function seamlessly. My goal now is to find a job where I can utilize the foundation of skills I have already acquired while learning and growing as an engineer from my colleagues and superiors every day. As a teacher, I strived to instill a thirst for knowledge and a love of learning that went beyond the classroom. This drive is something I value and possess in all walks of life, and I am so excited to continue learning."
+const aboutme1 = "While I started my career as a teacher (after  receiving a master's degree in education), through conversations with peers and the STEM teachers at my school, I discovered a newfound passion for software engineering. I decided to make a career change and enrolled in the Flatiron school’s software engineering program." 
 
-let aboutArr = aboutme.split(' ')
+const aboutme2 = "The rigorous program sparked my passion for front end development. The combination of creative problem solving and data manipulation with the necessary eye for styling and design fit my skillset so perfectly which has led to a true enjoyment of coding." 
+
+const aboutme3 = "I am devoted to continuing my journey towards becoming a professional software engineer and towards creating beautiful full-stack applications that function seamlessly. My goal is to find a job where I can utilize the foundation of skills I have already acquired while learning and growing as an engineer from my colleagues and superiors every day. As a teacher, I strived to instill a thirst for knowledge and love of learning that went beyond the classroom. This drive is something I have harnessed into the next chapter of my career, and I am excited to continue learning."
+
+let aboutArr1 = aboutme1.split(' ')
+let aboutArr2 = aboutme2.split(' ')
+let aboutArr3 = aboutme3.split(' ')
+
 
 const subheading1 = "Former teacher turned software engineer"
 let subArr1 = subheading1.split(' ')
@@ -67,7 +75,9 @@ const emoji = () => {
         <div class="container-inner">
           <img
             class="circle"
-src='https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definition-wallpapers-abstract-wallpaper-1920x1080.jpg'          />
+// src='https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definition-wallpapers-abstract-wallpaper-1920x1080.jpg'          
+src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/1024px-Solid_white.svg.png'
+/>
           <img
             class="img img1"
 src={headshot}          />
@@ -82,7 +92,7 @@ src={headshot}          />
     <AboutContainer>
             <Heading>ABOUT</Heading> <Heading2>ME</Heading2>
         <br/>
-
+        <Paragraph>
         {subArr1.map(word => {
             let spaced = word + '\xa0'
             return(
@@ -97,16 +107,37 @@ src={headshot}          />
                 <SubWord>{spaced}</SubWord>
             )
         })}          
-        
-        <br/>
+        </Paragraph>
 
-        {aboutArr.map(word => {
+        <br/>
+        <Paragraph>
+        {aboutArr1.map(word => {
             let spaced = word + '\xa0'
             return(
                 <Word onMouseOver={() => setEmojiText(word)}>{spaced}</Word>
             )
         })} 
+                        </Paragraph>
 
+                <br/>
+                <Paragraph>
+                {aboutArr2.map(word => {
+            let spaced = word + '\xa0'
+            return(
+                <Word onMouseOver={() => setEmojiText(word)}>{spaced}</Word>
+            )
+        })} 
+        </Paragraph>
+
+                <br/>
+                <Paragraph>
+                {aboutArr3.map(word => {
+            let spaced = word + '\xa0'
+            return(
+                <Word onMouseOver={() => setEmojiText(word)}>{spaced}</Word>
+            )
+        })} 
+                </Paragraph>
 
         {/* {aboutArray.map(section => {
             return(
@@ -120,9 +151,15 @@ src={headshot}          />
         })} */}
 
         </AboutContainer>
+        <br />
+  <img src={bars1}/>
         </Container>
     )
 }
+
+const Test = styled.div`
+background-color: white;
+`;
 
 const Sections = styled.div`
 display: grid;
@@ -156,17 +193,15 @@ text-shadow: 2px 2px 4px #000000;
 
 &:hover{
     // color: #202124;
-    text-shadow: 2px 2px 4px #89BEE0;
+    text-shadow: 2px 2px 4px #54A09E;
     font-size: 2em;
 
 }
 `;
 
-const Paragraph = styled.h5`
-color: white;
-font-size: 1.5em;
-margin-top: 20px;
-
+const Paragraph = styled.div`
+margin-top: 10px;
+margin-bottom: 10px;
 `;
 
 
@@ -180,7 +215,7 @@ margin-bottom: 20px;
 `;
 
 const Heading2 = styled.h1`
-color: #202124;
+color: #54A09E;
 font-size: 6em;
 position: relative;
 display: inline-block;
@@ -190,24 +225,24 @@ margin-bottom: 20px;
 `;
 
 const SubWord = styled.h1`
-color: #202124;
+color: #54A09E;
 font-size: 2em;
 margin-top: 20px;
 display: inline-block;
 transition: 0.3s;
-text-shadow: 2px 2px 4px white;
+// text-shadow: 2px 2px 4px white;
 text-transform: uppercase;
 &:hover{
     font-size: 2.5em;
     // color: white;
-    // text-shadow: 2px 2px 4px #89BEE0;
+    text-shadow: 2px 2px 4px #35363A;
 
 }
 
 `;
 
 const SubHeading2 = styled.h1`
-color: #202124;
+color: #54A09E;
 font-size: 4em;
 position: relative;
 display: inline
@@ -224,7 +259,8 @@ const Container = styled.div`
 // background-color: grey;
 justify-content: center;
 // text-align: center;
-min-height: 90vh;
+min-height: 90vh; 
+margin-bottom: 5vh;
 `;
 
 const AboutContainer = styled.div`
