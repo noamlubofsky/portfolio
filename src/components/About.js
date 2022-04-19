@@ -27,9 +27,9 @@ function About({apple, grad, job, journey, flatiron, learn, laptop}) {
         }
     ]
 
-const aboutme1 = "While I started my career as a teacher (after  receiving a master's degree in education), through conversations with peers and the STEM teachers at my school, I discovered a newfound passion for software engineering. I decided to make a career change and enrolled in the Flatiron school’s software engineering program." 
+const aboutme1 = "While I started my career as a teacher (after receiving a master's degree in education), through conversations with peers and the STEM teachers at my school, I discovered a newfound passion for software engineering. I decided to make a career change and enrolled in the Flatiron school’s software engineering program." 
 
-const aboutme2 = "The rigorous program sparked my passion for front end development. The combination of creative problem solving and data manipulation with the necessary eye for styling and design fit my skillset so perfectly which has led to a true enjoyment of coding." 
+const aboutme2 = "The rigorous program sparked my passion for front-end development. The combination of creative problem solving and data manipulation with the necessary eye for styling and design fit my skillset so perfectly which has led to a true enjoyment of coding." 
 
 const aboutme3 = "I am devoted to continuing my journey towards becoming a professional software engineer and towards creating beautiful full-stack applications that function seamlessly. My goal is to find a job where I can utilize the foundation of skills I have already acquired while learning and growing as an engineer from my colleagues and superiors every day. As a teacher, I strived to instill a thirst for knowledge and love of learning that went beyond the classroom. This drive is something I have harnessed into the next chapter of my career, and I am excited to continue learning."
 
@@ -183,25 +183,25 @@ const SectionDetails = styled.h4`
 color: transparent;
 `;
 
-const Word = styled.h5`
+const Word = styled.p`
 color: white;
-font-size: 1.5em;
+font-size: 1.3em;
 margin-top: 20px;
 display: inline-block;
 transition: 0.3s;
 text-shadow: 2px 2px 4px #000000;
 
-&:hover{
-    // color: #202124;
-    text-shadow: 2px 2px 4px #54A09E;
-    font-size: 2em;
+// &:hover{
+//     // color: #202124;
+//     text-shadow: 2px 2px 4px #54A09E;
+//     font-size: 2em;
 
-}
+// }
 `;
 
 const Paragraph = styled.div`
-margin-top: 10px;
-margin-bottom: 10px;
+margin-top: 3px;
+margin-bottom: 3px;
 `;
 
 
@@ -209,8 +209,8 @@ const Heading = styled.h1`
 color: white;
 font-size: 6em;
 display: inline-block;
-margin-top: 20px;
-margin-bottom: 20px;
+margin-top: 0px;
+margin-bottom: 10px;
 
 `;
 
@@ -219,15 +219,15 @@ color: #54A09E;
 font-size: 6em;
 position: relative;
 display: inline-block;
-margin-top: 20px;
-margin-bottom: 20px;
+margin-top: 0px;
+margin-bottom: 10px;
 
 `;
 
 const SubWord = styled.h1`
 color: #54A09E;
-font-size: 2em;
-margin-top: 20px;
+font-size: 1.7em;
+margin-top: 10px;
 display: inline-block;
 transition: 0.3s;
 // text-shadow: 2px 2px 4px white;

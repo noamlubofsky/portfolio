@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React, { useState } from "react";
 import bars2 from "../bars2.png";
+import resume from "../resume.pdf";
 
 function Contact() {
     const [copied, setCopied] = useState(false)
@@ -62,7 +63,17 @@ function Contact() {
 <div class="row">
   <div class="wrap" >
     <div class="left" >LinkedIn</div>
-    <div class="right" onClick={copyToClipboard} >https://www.linkedin.com/in/noam-lubofsky-0120b627/</div>  
+    <div class="right" onClick={copyToClipboard} >https://www.linkedin.com/in/noam-lubofsky-0120b627/
+    </div>  
+    </div>
+</div>
+
+<div class="row">
+  <div class="wrap" >
+    <div class="left" >Resume</div>
+    <div class="right"><a href={resume} download={resume}>Download</a>
+
+    </div>  
     </div>
 </div>
   
@@ -88,7 +99,7 @@ const Container = styled.div`
 
 // background-repeat: no-repeat;
 // background-size: cover;
-min-height: 750px;
+min-height: 800px;
 margin-bottom: 0px;
 padding: 0;
 border: 0;

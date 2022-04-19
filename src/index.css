@@ -142,6 +142,15 @@ iframe {
 
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #54A09E;
+}
+
 
 
 
