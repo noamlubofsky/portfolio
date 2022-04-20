@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { useState } from "react";
 import bars2 from "../bars2.png";
 import resume from "../resume.pdf";
+import bottom from "../bottomt.png";
 
 function Contact() {
     const [copied, setCopied] = useState(false)
@@ -17,7 +18,7 @@ function Contact() {
     return(
         <Container>
              <Heading>CONTACT</Heading> <Heading2>ME</Heading2>
-
+             <Info>
 <div id="pillar">
 
 {/* <Line>
@@ -71,7 +72,7 @@ function Contact() {
 <div class="row">
   <div class="wrap" >
     <div class="left" >Resume</div>
-    <div class="right"><a href={resume} download={resume}>Download</a>
+    <div class="right"><a href={resume} download='Noam Lubofsky Resume'>Download</a>
 
     </div>  
     </div>
@@ -79,19 +80,20 @@ function Contact() {
   
   </div>
   {!copied ? null : <Copied>Copied!</Copied>}
+  </Info>
   <br />
-        <Test>
-  <img src={bars2}/>
-  </Test>
+
+        <Bottom>
+        <img className='bottom' src={bottom}/>
+  </Bottom>
 
         </Container>
     )
 }
 
-const Test = styled.div`
-background-color: white;
-bottom: 0px;
-position: absolute;
+const Bottom = styled.div`
+// bottom: 0px;
+margin-bottom: 20px;
 `;
 
 const Container = styled.div`
@@ -141,6 +143,10 @@ display: inline-block;
 margin-top: 20px;
 margin-bottom: 20px;
 
+`;
+
+const Info = styled.div`
+height: 55vh;
 `;
 
 const Line = styled.div`

@@ -2,6 +2,8 @@ import styled from "styled-components";
 import headshot from "../headshot.png";
 import React, { useState } from "react";
 import bars1 from "../bars1.png";
+import bottom from "../bottomt.png";
+
 
 function About({apple, grad, job, journey, flatiron, learn, laptop}) {
     const [emojiText, setEmojiText] = useState('')
@@ -27,7 +29,7 @@ function About({apple, grad, job, journey, flatiron, learn, laptop}) {
         }
     ]
 
-const aboutme1 = "While I started my career as a teacher (after receiving a master's degree in education), through conversations with peers and the STEM teachers at my school, I discovered a newfound passion for software engineering. I decided to make a career change and enrolled in the Flatiron school’s software engineering program." 
+const aboutme1 = "While I started my career as a teacher (after receiving a master's degree in education), through conversations with peers and the STEM teachers at my school, I discovered a newfound passion for software engineering. I decided to make a career change and enrolled in the Flatiron school’s software engineering program. The rigorous program sparked my passion for front-end development. The combination of creative problem solving and data manipulation with the necessary eye for styling and design fit my skillset so perfectly which has led to a true enjoyment of coding." 
 
 const aboutme2 = "The rigorous program sparked my passion for front-end development. The combination of creative problem solving and data manipulation with the necessary eye for styling and design fit my skillset so perfectly which has led to a true enjoyment of coding." 
 
@@ -92,7 +94,7 @@ src={headshot}          />
     <AboutContainer>
             <Heading>ABOUT</Heading> <Heading2>ME</Heading2>
         <br/>
-        <Paragraph>
+        <SubParagraph>
         {subArr1.map(word => {
             let spaced = word + '\xa0'
             return(
@@ -107,7 +109,7 @@ src={headshot}          />
                 <SubWord>{spaced}</SubWord>
             )
         })}          
-        </Paragraph>
+        </SubParagraph>
 
         <br/>
         <Paragraph>
@@ -120,14 +122,14 @@ src={headshot}          />
                         </Paragraph>
 
                 <br/>
-                <Paragraph>
+                {/* <Paragraph>
                 {aboutArr2.map(word => {
             let spaced = word + '\xa0'
             return(
                 <Word onMouseOver={() => setEmojiText(word)}>{spaced}</Word>
             )
         })} 
-        </Paragraph>
+        </Paragraph> */}
 
                 <br/>
                 <Paragraph>
@@ -152,7 +154,7 @@ src={headshot}          />
 
         </AboutContainer>
         <br />
-  <img src={bars1}/>
+  <img className='bottom' src={bottom}/>
         </Container>
     )
 }
@@ -185,7 +187,7 @@ color: transparent;
 
 const Word = styled.p`
 color: white;
-font-size: 1.3em;
+font-size: 1.2em;
 margin-top: 20px;
 display: inline-block;
 transition: 0.3s;
@@ -200,8 +202,15 @@ text-shadow: 2px 2px 4px #000000;
 `;
 
 const Paragraph = styled.div`
-margin-top: 3px;
-margin-bottom: 3px;
+// margin-top: 2px;
+// margin-bottom: 2px;
+line-height: 10px;
+`;
+
+const SubParagraph = styled.div`
+// margin-top: 2px;
+// margin-bottom: 2px;
+line-height: 20px;
 `;
 
 

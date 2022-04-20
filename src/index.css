@@ -151,7 +151,10 @@ a:hover {
   color: #54A09E;
 }
 
-
+.bottom {
+  width: 100%;
+  height: 30vh;
+}
 
 
 @keyframes fadeInOpacity {
