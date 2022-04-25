@@ -65,7 +65,7 @@ function Projects({projects}) {
     title="Inline Frame Example"
     src={selected.link}></iframe>
     </div>
-    <ProjectsContainer>
+            <ProjectsContainer>
         {projects.map(project => {
             return(
             <Demo project={project} selected={selected} setSelected={setSelected}/>
@@ -111,7 +111,7 @@ min-height: 100vh;
 
 const ProjectsContainer = styled.div`
 display: grid;
-${!isMobile ? `grid-template-columns: auto auto auto;` : ``};
+${!isMobile ? `grid-template-columns: auto auto auto;` : `grid-template-columns: auto auto;`};
 justify-content: center;
 text-align: center;
 padding: 50px;

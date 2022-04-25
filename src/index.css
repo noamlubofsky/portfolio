@@ -180,7 +180,6 @@ a:hover {
 
 .display-on-hover {
   border-radius: 50%;
-
   align-items: center;
   position: relative;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -270,6 +269,101 @@ background-color: white;
 }
 
 .display-on-hover:after:hover{
+  background-color: teal;
+}
+
+
+.mobile-demo {
+  border-radius: 50%;
+  align-items: center;
+  position: relative;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: calc(1px + 1vw);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.15em #132529;
+  white-space: nowrap;
+  filter: blur(0.007em);
+    width: 150px;
+    height: 150px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    z-index: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.mobile-demo:before {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    content: '';
+    background: linear-gradient(45deg, #FFFFFF, #07C4C8, #13BFDF, #54A09E, #058489, #004A80, #013F44, #012670);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.mobile-demo:active {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    color: rgb(104, 104, 104);
+
+}
+
+.mobile-demo:active:after {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    background: transparent;
+}
+
+.mobile-demo:hover:before {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    opacity: 1;
+}
+
+.mobile-demo:after {
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(https://media.istockphoto.com/vectors/blue-background-aqua-texture-gradient-light-blur-blend-vector-id1132462892?k=20&m=1132462892&s=170667a&w=0&h=F_2gpQcfD6_uvnxNKyBXnFfKpee5nO3Pbvevq_CK_xI=); */
+/* background-image: url(https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definition-wallpapers-abstract-wallpaper-1920x1080.jpg); */
+background-repeat: no-repeat;
+background-size: cover;
+background-color: white;
+    left: 0;
+    top: 0;
+}
+
+.mobile-demo:after:hover{
   background-color: teal;
 }
 

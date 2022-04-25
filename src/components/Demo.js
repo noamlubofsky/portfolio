@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import {isMobile} from 'react-device-detect';
 
 function Demo({project, selected, setSelected}){
     const [viewing, setViewing] = useState(false)
@@ -16,7 +17,7 @@ function Demo({project, selected, setSelected}){
 
     return(
         <DemoContainer project={project}>
-            <TextContainer onClick={handleSelect} className="display-on-hover">
+            <TextContainer onClick={handleSelect} className={isMobile ? "mobile-demo" : "display-on-hover"}>
             {/* <Title>{project.title}</Title> */}
             <Icon src={project.icon}/>
             {/* <h3>{project.description}</h3> */}
@@ -31,8 +32,9 @@ function Demo({project, selected, setSelected}){
 }
 
 const Icon = styled.img`
-height: 175px;
-width: 175px;
+${!isMobile ? `height: 175px;` : `height: 100px;`};
+${!isMobile ? `width: 175px;` : `width: 100px;`};
+
 margin-top: 30px;
 `;
 
