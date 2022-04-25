@@ -18,9 +18,9 @@ function Contact() {
 
     return(
         <Container>
-             <Heading>CONTACT</Heading> <Heading2>ME</Heading2>
-             <Info>
-<div id="pillar">
+            <Heading>CONTACT</Heading> <Heading2>ME</Heading2>
+            <Info>
+<div id={!isMobile ? "pillar" : "mobilepillar"}>
 
 {/* <Line>
 <Box></Box> */}
@@ -101,20 +101,10 @@ const Container = styled.div`
 // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
 
 // background-repeat: no-repeat;
-// background-size: cover;
-min-height: 800px;
-margin-bottom: 0px;
-padding: 0;
-border: 0;
-outline: 0;
-font-size: 100%;
-position: relative;
+
 justify-content: center;
 align-items: center;
 text-align: center;
-// display: flex;
-//   display: grid;
-//   place-content: center;
 
 `;
 

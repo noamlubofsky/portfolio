@@ -400,6 +400,17 @@ background-color: white;
   font-family: 'Spartan';
 }
 
+#mobilepillar {
+  display: block;
+  /* margin: 100px auto; */
+  margin-left: -50px;
+  width: 400px;
+  transform: translateX(-200px);
+  perspective: 1900px;
+  float: top;
+  top: 0px;
+}
+
 #pillar {
   display: block;
   /* margin: 100px auto; */

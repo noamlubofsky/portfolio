@@ -4,10 +4,11 @@ import {isMobile} from 'react-device-detect';
 
 function Header() {
 
-  const options = ["", "about", "projects", "contact"];
+  const options = ["HOME", "ABOUT", "PROJECTS", "CONTACT"];
 
   const handleMenuChange = (e) => {
-    navigate(`./${e.target.value}`)
+    {e.target.value === "HOME" ? navigate('/') : 
+    navigate(`./${e.target.value.toLowerCase()}`)}
   };
 
     let navigate = useNavigate();

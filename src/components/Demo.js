@@ -7,8 +7,10 @@ function Demo({project, selected, setSelected}){
     const handleSelect = () => {
         if(selected.id === project.id){
             setSelected({})
+            window.scrollTo(0, 0)
         }else{
             setSelected(project)
+            window.scrollTo(0, 0)
         }
     }
 
