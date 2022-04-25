@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -19,7 +19,6 @@ import job from "./job.png"
 import journey from "./journey.png"
 import laptop from "./laptop.png"
 import learn from "./learn.png"
-
 
 
 function App() {

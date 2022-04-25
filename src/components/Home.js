@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import abstract from "../blue.gif";
+import {isMobile} from 'react-device-detect';
 
 function Home() {
     return(
@@ -22,7 +23,8 @@ const Container = styled.div`
 // background-image: url(https://i.pinimg.com/originals/1d/73/5a/1d735ad8eee8350adc96d50e1421ee6d.gif);
 background-image: url(${abstract});
 background-repeat: no-repeat;
-background-size: cover;
+${!isMobile ? `background-size: cover;
+` : `background-size: 375px 812px;`};
 min-height: 700px;
 margin: 0;
 padding: 0;
@@ -33,9 +35,6 @@ position: relative;
 justify-content: center;
 align-items: center;
 text-align: center;
-display: flex;
-  display: grid;
-  place-content: center;
 
 `;
 
@@ -51,7 +50,7 @@ align-self: center;
 
 const Heading = styled.h1`
 color: white;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 display: inline-block;
 
 `;
@@ -60,14 +59,16 @@ const Heading2 = styled.h1`
 // color: #01AFCF;
 // color: #54A09E;
 color: #54A09E;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 position: relative;
 display: inline-block;
+margin-bottom: 30px;
+margin-top: 0;
 `;
 
 const SubHeading = styled.h1`
 color: white;
-font-size: 4em;
+${!isMobile ? `font-size: 4em` : `font-size: 2em`};
 position: relative;
 display: inline
 `;
@@ -78,7 +79,7 @@ const SubHeading2 = styled.h1`
 color: #54A09E;
 // color: #038DA1;
 // color: #54A09E;
-font-size: 4em;
+${!isMobile ? `font-size: 4em` : `font-size: 2em`};
 position: relative;
 display: inline
 `;

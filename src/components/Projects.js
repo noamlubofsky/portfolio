@@ -1,6 +1,7 @@
 import Demo from "./Demo"
 import styled from "styled-components";
 import React, { useState } from "react";
+import {isMobile} from 'react-device-detect';
 
 function Projects({projects}) {
     const [selected, setSelected] = useState({})
@@ -29,6 +30,7 @@ function Projects({projects}) {
         </ProjectsContainer>
         :
         <div>
+            {!isMobile ? 
             <TestContainer>
             <LeftProjectsContainer>
         {firstHalf.map(project => {
@@ -52,7 +54,26 @@ function Projects({projects}) {
             )
         })}
         </RightProjectsContainer>
-        </TestContainer>
+        </TestContainer> 
+        : 
+        <div>
+        <div class="holds-the-iframe">
+        {/* <div class="loader"> */}
+  {/* <div class="loaderBar"></div> */}
+{/* </div> */}
+            <iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    src={selected.link}></iframe>
+    </div>
+    <ProjectsContainer>
+        {projects.map(project => {
+            return(
+            <Demo project={project} selected={selected} setSelected={setSelected}/>
+            )
+        })}
+        </ProjectsContainer>
+    </div>
+        }
         </div>
         }
         </Container>
@@ -62,7 +83,7 @@ function Projects({projects}) {
 
 const Heading = styled.h1`
 color: white;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 display: inline-block;
 margin: 0;
 margin-top: 20px;
@@ -70,7 +91,7 @@ margin-top: 20px;
 
 const Heading2 = styled.h1`
 color: #54A09E;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 position: relative;
 display: inline-block;
 margin: 0;
@@ -90,7 +111,7 @@ min-height: 100vh;
 
 const ProjectsContainer = styled.div`
 display: grid;
-grid-template-columns: auto auto auto;
+${!isMobile ? `grid-template-columns: auto auto auto;` : ``};
 justify-content: center;
 text-align: center;
 padding: 50px;

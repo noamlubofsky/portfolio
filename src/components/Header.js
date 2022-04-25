@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router";
+import {isMobile} from 'react-device-detect';
 
 function Header() {
+
+  const options = ["", "about", "projects", "contact"];
+
+  const handleMenuChange = (e) => {
+    navigate(`./${e.target.value}`)
+  };
 
     let navigate = useNavigate();
 
@@ -22,10 +29,11 @@ function Header() {
   }
 
     return(
+      <div>
+      {!isMobile ?
         <div>
-        <Container>
+          <Container>
             <Buttons>
-  
 <button className="glow-on-hover" onClick={toProjects}>
   Projects
 </button> 
@@ -43,6 +51,16 @@ function Header() {
 </Home>
 </Container>
 </div>
+:
+<div>
+        <select onChange={handleMenuChange} className='select'>
+          {options.map((option) => (
+            <option>{option}</option>
+          ))}
+        </select>
+  </div>
+}
+      </div>
     )
 }
 

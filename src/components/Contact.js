@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import bars2 from "../bars2.png";
 import resume from "../resume.pdf";
 import bottom from "../bottomt.png";
+import {isMobile} from 'react-device-detect';
 
 function Contact() {
     const [copied, setCopied] = useState(false)
@@ -128,7 +129,7 @@ margin-top: 20px;
 
 const Heading = styled.h1`
 color: white;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 display: inline-block;
 margin-top: 20px;
 margin-bottom: 20px;
@@ -137,7 +138,7 @@ margin-bottom: 20px;
 
 const Heading2 = styled.h1`
 color: #54A09E;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 position: relative;
 display: inline-block;
 margin-top: 20px;

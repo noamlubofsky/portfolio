@@ -3,7 +3,7 @@ import headshot from "../headshot.png";
 import React, { useState } from "react";
 import bars1 from "../bars1.png";
 import bottom from "../bottomt.png";
-
+import {isMobile} from 'react-device-detect';
 
 function About({apple, grad, job, journey, flatiron, learn, laptop}) {
     const [emojiText, setEmojiText] = useState('')
@@ -72,6 +72,7 @@ const emoji = () => {
 
     return(
         <Container>
+            {isMobile ? null : 
        <div class="person">
       <div class="container">
         <div class="container-inner">
@@ -85,7 +86,8 @@ src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/1
 src={headshot}          />
         </div>
       </div>
-    </div>     
+    </div>   
+}  
     {/* <div class="wrapper">
   <div class="moving">
     <img className='emoji' src={emoji()}/>
@@ -154,7 +156,23 @@ src={headshot}          />
 
         </AboutContainer>
         <br />
-  <img className='bottom' src={bottom}/>
+        {!isMobile ? null : 
+       <div class="person">
+      <div class="container">
+        <div class="container-inner">
+          <img
+            class="circle"
+// src='https://www.teahub.io/photos/full/179-1794929_white-abstract-high-definition-wallpapers-abstract-wallpaper-1920x1080.jpg'          
+src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/1024px-Solid_white.svg.png'
+/>
+          <img
+            class="img img1"
+src={headshot}          />
+        </div>
+      </div>
+    </div>   
+}  
+  <img className={isMobile ? 'mobilebottom' : 'bottom'} src={bottom}/>
         </Container>
     )
 }
@@ -216,7 +234,7 @@ line-height: 20px;
 
 const Heading = styled.h1`
 color: white;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 display: inline-block;
 margin-top: 0px;
 margin-bottom: 10px;
@@ -225,7 +243,7 @@ margin-bottom: 10px;
 
 const Heading2 = styled.h1`
 color: #54A09E;
-font-size: 6em;
+${!isMobile ? `font-size: 6em` : `font-size: 3em`};
 position: relative;
 display: inline-block;
 margin-top: 0px;
@@ -235,7 +253,7 @@ margin-bottom: 10px;
 
 const SubWord = styled.h1`
 color: #54A09E;
-font-size: 1.7em;
+${!isMobile ? `font-size: 1.7em` : `font-size: 1.5em`};
 margin-top: 10px;
 display: inline-block;
 transition: 0.3s;
