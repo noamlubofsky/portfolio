@@ -129,7 +129,6 @@ margin-bottom: 20px;
 const Heading2 = styled.h1`
 color: #54A09E;
 ${!isMobile ? `font-size: 6em` : `font-size: 3em`};
-position: relative;
 display: inline-block;
 margin-top: 20px;
 margin-bottom: 20px;

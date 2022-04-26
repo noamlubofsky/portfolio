@@ -1,8 +1,11 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router";
 import {isMobile} from 'react-device-detect';
+import menu from "../menu.png";
 
 function Header() {
+  const [drop, setDrop] = useState(false)
 
   const options = ["HOME", "ABOUT", "PROJECTS", "CONTACT"];
 
@@ -15,18 +18,22 @@ function Header() {
 
       const toProjects = () => {
     navigate("/projects");
+    setDrop(false)
   };
 
   const toHome = () => {
     navigate("/");
+    setDrop(false)
   };
 
   const toAbout = () => {
     navigate("/about");
+    setDrop(false)
   };
 
   const toContact = () => {
       navigate("/contact");
+      setDrop(false)
   }
 
     return(
@@ -50,20 +57,60 @@ function Header() {
   Noam Lubofsky
 </button> 
 </Home>
+
 </Container>
+<div>
+
+</div>
 </div>
 :
 <div>
-        <select onChange={handleMenuChange} className='select'>
+        {/* <select onChange={handleMenuChange} className='select'>
           {options.map((option) => (
             <option>{option}</option>
           ))}
-        </select>
+        </select> */}
+        <Container>
+        <MenuIcon src={menu} onClick={() => setDrop(!drop)} alt='menu'/>
+        </Container>
+        {!drop ? null :
+<Dropdown>
+  <Dropitem onClick={toHome}>HOME</Dropitem>
+  <Dropitem onClick={toAbout}>ABOUT</Dropitem>
+  <Dropitem onClick={toProjects}>PROJECTS</Dropitem>
+  <Dropitem onClick={toContact}>CONTACT</Dropitem>
+</Dropdown>
+}
   </div>
 }
       </div>
     )
 }
+
+const Dropitem = styled.div`
+
+  background-color: grey;
+  padding: 10px;
+`;
+
+const Dropdown = styled.div`
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+  font-size: 1.5em;
+  color: white;
+  line-height: 30px;
+  font-weight: bold;
+  position: absolute;
+  float: right;
+  right: 0;
+`;
+
+const MenuIcon = styled.img`
+    height: 50px;
+    float: right;
+    margin: 10px;
+`;
 
 
 const Container = styled.div`

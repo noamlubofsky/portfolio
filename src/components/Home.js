@@ -31,7 +31,7 @@ padding: 0;
 border: 0;
 outline: 0;
 font-size: 100%;
-position: relative;
+// position: relative;
 justify-content: center;
 align-items: center;
 text-align: center;
