@@ -2,9 +2,9 @@ import styled from "styled-components";
 import abstract from "../blue.gif";
 import {isMobile} from 'react-device-detect';
 
-function Home() {
+function Home({drop}) {
     return(
-        <Container>
+        <Container drop={drop}>
             <Header>
         <Heading>Noam</Heading> <Heading2>Lubofsky</Heading2>
         <br/>
@@ -35,6 +35,7 @@ font-size: 100%;
 justify-content: center;
 align-items: center;
 text-align: center;
+${props => props.drop ? 'opacity: 50%' : null}
 
 `;
 
@@ -60,7 +61,7 @@ const Heading2 = styled.h1`
 // color: #54A09E;
 color: #54A09E;
 ${!isMobile ? `font-size: 6em` : `font-size: 3em`};
-position: relative;
+// position: relative;
 display: inline-block;
 margin-bottom: 30px;
 margin-top: 0;

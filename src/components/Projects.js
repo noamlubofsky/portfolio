@@ -3,7 +3,7 @@ import styled from "styled-components";
 import React, { useState } from "react";
 import {isMobile} from 'react-device-detect';
 
-function Projects({projects}) {
+function Projects({projects, drop}) {
     const [selected, setSelected] = useState({})
     
     const firstHalf = projects.slice(0, 3);
@@ -12,7 +12,7 @@ function Projects({projects}) {
 
     return(
         <div>
-        <Container>
+        <Container drop={drop}>
         <Heading>MY</Heading> <Heading2>PROJECTS</Heading2>
         <br/>
         {/* {!selected.id ? null :
@@ -107,6 +107,7 @@ min-height: 100vh;
 // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW53Rhtwtr19G8gxo7Jjsewdzpl5fCDAf-Z1VYH2Q07_k8ww8To0yu2SH7jVdJT_yfn-o&usqp=CAU);
 // background-repeat: no-repeat;
 // background-size: cover;
+${props => props.drop ? 'opacity: 50%' : null}
 `;
 
 const ProjectsContainer = styled.div`

@@ -5,7 +5,7 @@ import bars1 from "../bars1.png";
 import bottom from "../bottomt.png";
 import {isMobile} from 'react-device-detect';
 
-function About({apple, grad, job, journey, flatiron, learn, laptop}) {
+function About({drop}) {
     const [emojiText, setEmojiText] = useState('')
 
     const aboutArray = [
@@ -46,32 +46,32 @@ let subArr1 = subheading1.split(' ')
 const subheading2 = "with a passion for front-end development"
 let subArr2 = subheading2.split(' ')
 
-const emoji = () => {
-    if (emojiText.toLowerCase() === 'teacher'){
-        return apple
-    }
-    if (emojiText.toLowerCase() === `master's` || emojiText.toLowerCase() === 'degree'){
-        return grad
-    }
-    if (emojiText.toLowerCase() === `job`){
-        return job
-    }
-    if (emojiText.toLowerCase() === `journey`){
-        return journey
-    }
-    if (emojiText.toLowerCase() === `flatiron`){
-        return flatiron
-    }
-    if (emojiText.toLowerCase() === `learn` || emojiText.toLowerCase() === 'learning' || emojiText.toLowerCase() === 'learned' || emojiText.toLowerCase() === 'growing'){
-        return learn
-    }
-    if (emojiText.toLowerCase() === `software` || emojiText.toLowerCase() === 'engineer' || emojiText.toLowerCase() === 'engineering'){
-        return laptop
-    }
-}
+// const emoji = () => {
+//     if (emojiText.toLowerCase() === 'teacher'){
+//         return apple
+//     }
+//     if (emojiText.toLowerCase() === `master's` || emojiText.toLowerCase() === 'degree'){
+//         return grad
+//     }
+//     if (emojiText.toLowerCase() === `job`){
+//         return job
+//     }
+//     if (emojiText.toLowerCase() === `journey`){
+//         return journey
+//     }
+//     if (emojiText.toLowerCase() === `flatiron`){
+//         return flatiron
+//     }
+//     if (emojiText.toLowerCase() === `learn` || emojiText.toLowerCase() === 'learning' || emojiText.toLowerCase() === 'learned' || emojiText.toLowerCase() === 'growing'){
+//         return learn
+//     }
+//     if (emojiText.toLowerCase() === `software` || emojiText.toLowerCase() === 'engineer' || emojiText.toLowerCase() === 'engineering'){
+//         return laptop
+//     }
+// }
 
     return(
-        <Container>
+        <Container drop={drop}>
             {isMobile ? null : 
        <div class="person">
       <div class="container">
@@ -288,6 +288,7 @@ justify-content: center;
 // text-align: center;
 min-height: 90vh; 
 margin-bottom: 5vh;
+${props => props.drop ? 'opacity: 50%' : null}
 `;
 
 const AboutContainer = styled.div`

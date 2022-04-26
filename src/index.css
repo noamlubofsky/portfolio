@@ -33,6 +33,28 @@ code {
   width: 100%;
 }
 
+.slide {
+  transition: transform 2s ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100px);
+  }
+  to { 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdown {
+   animation: fade .5s linear forwards;
+}
+
+
 .glow-on-hover {
   margin-top: 10px;
   align-items: center;
@@ -571,7 +593,7 @@ background-color: white;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   transition: .3s;
-
+  position: relative;
 }
 
 .row .right:hover{

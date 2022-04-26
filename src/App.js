@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -22,6 +22,7 @@ import learn from "./learn.png"
 
 
 function App() {
+  const [drop, setDrop] = useState(false)
 
 const projects = [
   {
@@ -74,13 +75,13 @@ const projects = [
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Header drop={drop} setDrop={setDrop}/>
         <Routes>
           <Route
             path="/"
             element={
               <Home
-
+              drop={drop}
               />
             }
           />
@@ -95,6 +96,7 @@ const projects = [
                 laptop={laptop}
                 learn={learn}
                 flatiron={flatiron}
+                drop={drop}
               />
             }
           />
@@ -103,6 +105,7 @@ const projects = [
             element={
               <Projects
                 projects={projects}
+                drop={drop}
               />
             }
           />
@@ -110,6 +113,7 @@ const projects = [
             path="/contact"
             element={
               <Contact
+              drop={drop}
               />
             }
           />

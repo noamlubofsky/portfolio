@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router";
 import {isMobile} from 'react-device-detect';
-import menu from "../menuicon.png";
+import menu from "../menu-icon.png";
 
-function Header() {
-  const [drop, setDrop] = useState(false)
+function Header({drop, setDrop}) {
 
   const options = ["HOME", "ABOUT", "PROJECTS", "CONTACT"];
 
@@ -74,7 +73,7 @@ function Header() {
         <MenuIcon src={menu} onClick={() => setDrop(!drop)} alt='menu'/>
         </Container>
         {!drop ? null :
-<Dropdown>
+<Dropdown className='dropdown'>
   <Dropitem onClick={toHome}>HOME</Dropitem>
   <Dropitem onClick={toAbout}>ABOUT</Dropitem>
   <Dropitem onClick={toProjects}>PROJECTS</Dropitem>
@@ -94,9 +93,9 @@ const Dropitem = styled.div`
 `;
 
 const Dropdown = styled.div`
-  justify-content: right;
-  align-items: right;
-  text-align: right;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 1.5em;
   color: white;
   line-height: 30px;
@@ -104,6 +103,8 @@ const Dropdown = styled.div`
   position: absolute;
   float: right;
   right: 0;
+  z-index: 1;
+
 `;
 
 const MenuIcon = styled.img`

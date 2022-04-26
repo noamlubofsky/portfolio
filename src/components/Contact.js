@@ -5,7 +5,7 @@ import resume from "../resume.pdf";
 import bottom from "../bottomt.png";
 import {isMobile} from 'react-device-detect';
 
-function Contact() {
+function Contact({drop}) {
     const [copied, setCopied] = useState(false)
 
     const copyToClipboard = (e) => {
@@ -13,11 +13,27 @@ function Contact() {
         navigator.clipboard.writeText(text).then(function() {
             setCopied(true)
             setTimeout(() => setCopied(false), 1000)
-          })      };
+          })      
+        };
+
+        const toGit = () => {
+          window.open(
+            "https://github.com/noamlubofsky", "_blank");
+        }
+
+        const toLinked = () => {
+          window.open(
+            "https://www.linkedin.com/in/noam-lubofsky-0120b627/", "_blank");
+        }
+
+        const toMedium = () => {
+          window.open(
+            "https://noamlubofsky.medium.com", "_blank");
+        }
 
 
     return(
-        <Container>
+        <Container drop={drop}>
             <Heading>CONTACT</Heading> <Heading2>ME</Heading2>
             <Info>
 <div id={!isMobile ? "pillar" : "mobilepillar"}>
@@ -50,14 +66,14 @@ function Contact() {
   <div class="row">
   <div class="wrap">
     <div class="left">Github</div>
-    <div class="right" onClick={copyToClipboard}>https://github.com/noamlubofsky</div>  
+    <div class="right" onClick={toGit}>https://github.com/noamlubofsky</div>  
     </div>
 </div>
   
   <div class="row">
   <div class="wrap">
     <div class="left">Medium</div>
-    <div class="right" onClick={copyToClipboard}>https://noamlubofsky.medium.com
+    <div class="right" onClick={toMedium}>https://noamlubofsky.medium.com
 </div>  
     </div>
 </div>
@@ -65,7 +81,7 @@ function Contact() {
 <div class="row">
   <div class="wrap" >
     <div class="left" >LinkedIn</div>
-    <div class="right" onClick={copyToClipboard} >https://www.linkedin.com/in/noam-lubofsky-0120b627/
+    <div class="right" onClick={toLinked} >https://www.linkedin.com/in/noam-lubofsky-0120b627/
     </div>  
     </div>
 </div>
@@ -105,6 +121,7 @@ const Container = styled.div`
 justify-content: center;
 align-items: center;
 text-align: center;
+${props => props.drop ? 'opacity: 50%' : null}
 
 `;
 
