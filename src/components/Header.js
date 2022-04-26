@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router";
 import {isMobile} from 'react-device-detect';
-import menu from "../menu.png";
+import menu from "../menuicon.png";
 
 function Header() {
   const [drop, setDrop] = useState(false)
