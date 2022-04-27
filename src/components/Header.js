@@ -104,6 +104,7 @@ const Dropdown = styled.div`
   float: right;
   right: 0;
   z-index: 1;
+  transition: all .5s;
 
 `;
 

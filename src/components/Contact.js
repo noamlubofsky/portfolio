@@ -121,8 +121,8 @@ const Container = styled.div`
 justify-content: center;
 align-items: center;
 text-align: center;
-${props => props.drop ? 'opacity: 50%' : null}
-
+${props => props.drop ? 'opacity: 50%;' : null}
+transition: all .5s;
 `;
 
 const Copied = styled.h1`

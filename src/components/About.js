@@ -288,7 +288,8 @@ justify-content: center;
 // text-align: center;
 min-height: 90vh; 
 margin-bottom: 5vh;
-${props => props.drop ? 'opacity: 50%' : null}
+${props => props.drop ? 'opacity: 50%;' : null}
+transition: all .5s;
 `;
 
 const AboutContainer = styled.div`

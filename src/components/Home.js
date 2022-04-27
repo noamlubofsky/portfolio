@@ -35,8 +35,8 @@ font-size: 100%;
 justify-content: center;
 align-items: center;
 text-align: center;
-${props => props.drop ? 'opacity: 50%' : null}
-
+${props => props.drop ? 'opacity: 50%;' : null}
+transition: all .5s;
 `;
 
 const Header = styled.div`
